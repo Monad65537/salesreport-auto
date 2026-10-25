@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "salesreport-auto"
+version = "0.1.0"
+description = "Exact, auditable standalone transaction and product Excel reports"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["pandas>=2.2,<4", "openpyxl>=3.1,<4"]
+
+[project.scripts]
+salesreport-auto = "salesreport_auto.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.9,<1", "build>=1.2,<2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
+markers = ["sheetmerge_integration: optional read-only integration with the sibling SheetMerge environment"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

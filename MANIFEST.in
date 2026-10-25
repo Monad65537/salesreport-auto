@@ -1,0 +1,12 @@
+include .gitignore README.md pyproject.toml
+include docs/REPORTING_SPEC.md
+include docs/RELEASE_AUDIT.md
+include demo/sales.csv demo/products.csv
+recursive-include tests *.py
+global-exclude *.py[cod]
+prune .venv
+prune .test-tmp
+prune .pytest_cache
+prune .ruff_cache
+prune build
+prune dist

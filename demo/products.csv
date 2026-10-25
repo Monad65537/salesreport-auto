@@ -1,0 +1,6 @@
+﻿branch_id,transaction_id,transaction_date,customer_id,amount,currency,line_id,product_id,quantity,unit_price,product_name
+001,T100,2026-01-10,C001,60.00,USD,L1,P001,2,30.00,Keyboard
+001,T100,2026-01-10,C001,25.00,USD,L2,P002,1,25.00,Mouse
+001,T101,2026-01-11,C002,90.00,USD,L1,P001,3,30.00,Keyboard
+002,T102,2026-02-02,C003,50.00,USD,L1,P002,2,25.00,Mouse
+002,T103,2026-02-05,C004,-30.00,USD,L1,P001,-1,30.00,Keyboard
