@@ -9,6 +9,28 @@ locally and offline after installation, without Excel automation or a SheetMerge
 installation. See the [release audit and coverage matrix](docs/RELEASE_AUDIT.md)
 for verification evidence and known limits.
 
+## Example report
+
+The following screenshot shows the `Summary` worksheet generated from the included synthetic transaction dataset.
+
+![SalesReport Auto transaction summary](docs/screenshots/transactions-summary.png)
+
+The demonstration processes seven accepted transactions and reports **USD 435.75** in net revenue.
+
+The Excel workbook also includes monthly sales, branch performance, data-quality details, and original input records.
+
+For product-level reporting, the application supports a separate mode with product rankings and quantity metrics.
+
+To reproduce the demonstrated transaction report:
+
+```powershell
+.\.venv\Scripts\salesreport-auto.exe --mode transactions --input demo/sales.csv --output reports/sales.xlsx
+```
+
+Use a different output filename if `reports/sales.xlsx` already exists.
+
+All example records are synthetic. The screenshot illustrates generated output and does not represent an actual client engagement.
+
 ## Business value
 
 Sales exports often need repeated grouping, deduplication and spreadsheet checks
